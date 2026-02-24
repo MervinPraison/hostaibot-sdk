@@ -1,0 +1,22 @@
+# Source (dist/ is published instead)
+src/
+
+# Tests
+**/__tests__/
+**/*.test.ts
+**/*.spec.ts
+vitest.config.ts
+
+# Config
+tsconfig.json
+.gitignore
+.git/
+.github/
+
+# Environment
+.env
+.env.*
+node_modules/
+
+# OS
+.DS_Store

@@ -1,0 +1,45 @@
+{
+    "id": "hostaibot",
+    "name": "HostAIBot",
+    "description": "Managed AI agent hosting — connect your OpenClaw to hostaibot.com",
+    "configSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "controlPlaneUrl": {
+                "type": "string",
+                "default": "https://api.hostaibot.com"
+            },
+            "instanceToken": {
+                "type": "string"
+            },
+            "heartbeatIntervalMs": {
+                "type": "number",
+                "default": 30000
+            },
+            "enableBranding": {
+                "type": "boolean",
+                "default": true
+            }
+        }
+    },
+    "uiHints": {
+        "controlPlaneUrl": {
+            "label": "Control Plane URL",
+            "help": "HostAIBot API endpoint"
+        },
+        "instanceToken": {
+            "label": "Instance Token",
+            "help": "Token from your hostaibot.com dashboard",
+            "sensitive": true
+        },
+        "heartbeatIntervalMs": {
+            "label": "Heartbeat Interval (ms)",
+            "advanced": true
+        },
+        "enableBranding": {
+            "label": "Enable HostAIBot Branding",
+            "help": "Replace OpenClaw branding in pairing messages"
+        }
+    }
+}

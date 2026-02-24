@@ -1,12 +1,45 @@
 {
     "name": "hostaibot",
-    "version": "0.0.1",
-    "description": "Host AI Bot - AI Agent Hosting Platform",
+    "version": "0.0.2",
+    "description": "Host AI Bot - AI Agent Hosting Platform - OpenClaw Plugin",
+    "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "openclaw.plugin.json"
+    ],
     "scripts": {
         "build": "tsc",
+        "test": "vitest run",
+        "test:unit": "vitest run src/__tests__/config.test.ts src/__tests__/hmac.test.ts src/__tests__/control-plane-client.test.ts src/__tests__/gateway-methods.test.ts src/__tests__/pairing-watcher.test.ts src/__tests__/http-routes.test.ts src/__tests__/hooks.test.ts src/__tests__/service.test.ts",
+        "test:integration": "vitest run src/__tests__/index.test.ts",
+        "test:smoke": "vitest run src/__tests__/smoke.test.ts",
+        "typecheck": "tsc --noEmit",
         "prepublishOnly": "npm run build"
+    },
+    "openclaw": {
+        "extensions": [
+            "./src/index.ts"
+        ],
+        "channel": {
+            "id": "hostaibot",
+            "label": "HostAIBot",
+            "blurb": "Managed AI agent hosting at hostaibot.com"
+        },
+        "install": {
+            "npmSpec": "hostaibot",
+            "defaultChoice": "npm"
+        }
+    },
+    "dependencies": {
+        "ws": "^8.18.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@types/ws": "^8.5.0",
+        "typescript": "^5.7.0",
+        "vitest": "^3.0.0"
     },
     "author": "MervinPraison",
     "license": "SEE LICENSE IN LICENSE",
@@ -14,5 +47,13 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/MervinPraison/hostaibot-sdk"
-    }
+    },
+    "keywords": [
+        "openclaw",
+        "plugin",
+        "ai",
+        "agent",
+        "hosting",
+        "hostaibot"
+    ]
 }

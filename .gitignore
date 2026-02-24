@@ -1,20 +1,25 @@
-# Python
-__pycache__/
-*.egg-info/
-dist/
-build/
-*.whl
-*.tar.gz
-.uv/
-
-# TypeScript
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+
+# Environment
+.env
+.env.*
+
+# Lock files
 package-lock.json
 
-# Rust
-target/
-Cargo.lock
+# Coverage
+coverage/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
