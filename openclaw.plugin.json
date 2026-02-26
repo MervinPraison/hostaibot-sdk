@@ -8,7 +8,7 @@
         "properties": {
             "controlPlaneUrl": {
                 "type": "string",
-                "default": "https://api.hostaibot.com"
+                "default": "https://hostaibot.com"
             },
             "instanceToken": {
                 "type": "string"

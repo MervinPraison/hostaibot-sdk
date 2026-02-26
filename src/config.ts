@@ -5,7 +5,7 @@
 import type { HostAIBotConfig, HostAIBotRawConfig } from "./types.js";
 
 const DEFAULTS: HostAIBotConfig = {
-    controlPlaneUrl: "https://api.hostaibot.com",
+    controlPlaneUrl: "https://hostaibot.com",
     instanceToken: "",
     heartbeatIntervalMs: 30_000,
     enableBranding: true,

@@ -172,4 +172,4 @@ export interface OpenClawPluginApi {
 // Module version (synced with package.json)
 // ============================================================================
 
-export const VERSION = "0.0.1";
+export const VERSION = "0.0.3";

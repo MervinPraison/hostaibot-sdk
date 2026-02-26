@@ -15,7 +15,7 @@ vi.mock("ws", () => ({
 }));
 
 const mockConfig: HostAIBotConfig = {
-    controlPlaneUrl: "https://api.hostaibot.com",
+    controlPlaneUrl: "https://hostaibot.com",
     instanceToken: "tok_test",
     heartbeatIntervalMs: 30_000,
     enableBranding: true,

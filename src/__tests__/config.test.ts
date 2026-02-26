@@ -30,7 +30,7 @@ describe("resolveConfig", () => {
 
     it("uses defaults when both pluginConfig and env are absent", () => {
         const config = resolveConfig(undefined, {});
-        expect(config.controlPlaneUrl).toBe("https://api.hostaibot.com");
+        expect(config.controlPlaneUrl).toBe("https://hostaibot.com");
         expect(config.instanceToken).toBe("");
         expect(config.heartbeatIntervalMs).toBe(30_000);
         expect(config.enableBranding).toBe(true);
@@ -55,7 +55,7 @@ describe("resolveConfig", () => {
 describe("validateConfig", () => {
     it("returns ok for valid config", () => {
         const result = validateConfig({
-            controlPlaneUrl: "https://api.hostaibot.com",
+            controlPlaneUrl: "https://hostaibot.com",
             instanceToken: "tok_123",
             heartbeatIntervalMs: 30_000,
             enableBranding: true,
@@ -65,7 +65,7 @@ describe("validateConfig", () => {
 
     it("returns error for missing instanceToken", () => {
         const result = validateConfig({
-            controlPlaneUrl: "https://api.hostaibot.com",
+            controlPlaneUrl: "https://hostaibot.com",
             instanceToken: "",
             heartbeatIntervalMs: 30_000,
             enableBranding: true,
@@ -79,7 +79,7 @@ describe("validateConfig", () => {
 
     it("returns error for heartbeatIntervalMs below minimum", () => {
         const result = validateConfig({
-            controlPlaneUrl: "https://api.hostaibot.com",
+            controlPlaneUrl: "https://hostaibot.com",
             instanceToken: "tok_123",
             heartbeatIntervalMs: 500,
             enableBranding: true,

@@ -53,7 +53,7 @@ export function createService(
 
             components = { client, watcher };
         },
-        stop: async () => {
+        stop: async (_ctx: PluginServiceContext) => {
             if (components) {
                 components.client.disconnect();
                 components.watcher.stop();

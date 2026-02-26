@@ -23,7 +23,7 @@ function createMockApi(): OpenClawPluginApi & { registeredHooks: Map<string, Fun
 }
 
 const defaultConfig: HostAIBotConfig = {
-    controlPlaneUrl: "https://api.hostaibot.com",
+    controlPlaneUrl: "https://hostaibot.com",
     instanceToken: "tok_test",
     heartbeatIntervalMs: 30_000,
     enableBranding: true,

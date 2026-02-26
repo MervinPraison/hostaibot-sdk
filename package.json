@@ -1,6 +1,6 @@
 {
     "name": "hostaibot",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Host AI Bot - AI Agent Hosting Platform - OpenClaw Plugin",
     "type": "module",
     "main": "dist/index.js",

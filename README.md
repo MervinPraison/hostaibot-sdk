@@ -19,7 +19,7 @@ The plugin is configured through OpenClaw's plugin config system. Set values via
 1. **Environment variables** (recommended for Docker):
    ```bash
    HOSTAIBOT_INSTANCE_TOKEN=your-token-here
-   HOSTAIBOT_CONTROL_PLANE_URL=https://api.hostaibot.com  # optional
+   HOSTAIBOT_CONTROL_PLANE_URL=https://hostaibot.com  # optional
    ```
 
 2. **OpenClaw config file** (`openclaw.json`):
@@ -41,7 +41,7 @@ The plugin is configured through OpenClaw's plugin config system. Set values via
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `instanceToken` | string | — | Token from your [dashboard](https://hostaibot.com/dashboard) |
-| `controlPlaneUrl` | string | `https://api.hostaibot.com` | API endpoint |
+| `controlPlaneUrl` | string | `https://hostaibot.com` | API endpoint |
 | `heartbeatIntervalMs` | number | `30000` | Heartbeat interval (ms) |
 | `enableBranding` | boolean | `true` | Replace OpenClaw branding in pairing messages |
 
